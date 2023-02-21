@@ -67,7 +67,7 @@ public class CyclesTheme {
                     " четное количество двоек");
         } else {
             System.out.println("число " + num1 + " содержит " + countTwos +
-                   " количество нечетных двоек\n");
+                   " нечетных количество двоек\n");
         }
         
         System.out.println("6. Отображение фигур в консоли:\n");   
