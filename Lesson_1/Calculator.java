@@ -25,9 +25,8 @@ public class Calculator {
             for (int i = 0; i < number2; i++) {
                 result *= number;
             }
-        }
-        else {
-            result = 0;
+        } else {
+              result = 0;
         }
         System.out.println(number + " " + sign + " " + number2 + " = " + result);
 
