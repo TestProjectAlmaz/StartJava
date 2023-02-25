@@ -9,9 +9,9 @@ public class CyclesTheme {
                 evenSum += counter;
             } else {
                 oddSum += counter;
-                }   
+        }   
         counter++;
-            } while (counter <= 21);          
+        } while (counter <= 21);          
         System.out.println("В промежутке [-10, 21]:\n " + "сумма четных чисел = " +
                 oddSum + " \n " + "сумма нечетных чисел = " + evenSum + "\n");    
          
@@ -40,7 +40,7 @@ public class CyclesTheme {
             if (i < 10) {
                 System.out.printf("%5d ", i);
         } else {
-          System.out.printf("%5d ", i);
+            System.out.printf("%5d ", i);
         }
         if (i % 5 == 4) {
             System.out.println();
@@ -58,7 +58,7 @@ public class CyclesTheme {
                 countTwos++;
         }
         num1 /= 10;
-            }
+        }
         if (countTwos % 2 == 0) {
             System.out.println("Число " + num1 + " содержит " + countTwos + " четное количество двоек");
         } else {
@@ -70,7 +70,7 @@ public class CyclesTheme {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 10; j++) {
                 System.out.print("*");
-            }
+        }
         System.out.println();
         }
         //Первый прямоугольный треугольник
@@ -78,7 +78,7 @@ public class CyclesTheme {
         while (count1 > 0) {
             for (int j = 0; j < count1; j++) {
                 System.out.print("#");
-            }
+        }
         System.out.println();
         count1--;
         }
@@ -110,7 +110,7 @@ public class CyclesTheme {
             if (i % 2 != 0 && (i <= 57 || i >= 65 && i <= 90)) {
                 System.out.printf("%5d | %5c\n", i, (char)i);
         } else if (i % 2 == 0 && (i >= 97 && i <= 122)) {
-                System.out.printf("%5d | %5c\n", i, (char)i);
+            System.out.printf("%5d | %5c\n", i, (char)i);
             }
         }
 
@@ -155,7 +155,7 @@ public class CyclesTheme {
             System.out.printf("%2d |", count);
             for (int j = 2; j <= 9; j++) {
                 System.out.printf("%3d", count * j);
-            }
+        }
         System.out.println();
             }      
           }
