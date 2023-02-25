@@ -1,5 +1,6 @@
 public class MyFirstGame {
     public static void main (String[] args) {
+        System.out.println("1. Игра “Угадай число”:\n ");
         int randomNumber = (int) (Math.random() * 100 + 1);
         int playerNumber = 0;
         System.out.println("Угадай число в промежутке от 0 до 100");

@@ -6,9 +6,9 @@ public class CyclesTheme {
         int counter = -10;
         do {
             if (counter % 2 == 0) {
-                evenSum += counter;
-            } else {
                 oddSum += counter;
+            } else {
+                evenSum += counter;
         }   
         counter++;
         } while (counter <= 21);          
