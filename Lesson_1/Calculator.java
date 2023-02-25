@@ -7,26 +7,21 @@ public class Calculator {
 
         if (sign.equals("+")) {
             result = number + number2;
-        }
-        else if (sign.equals("-")) {
+        } else if (sign.equals("-")) {
             result = number - number2;
-        }
-        else if (sign.equals("*")) {
+        } else if (sign.equals("*")) {
             result = number * number2;
-        }
-        else if (sign.equals("/")) {
+        } else if (sign.equals("/")) {
             result = number / number2;
-        }
-        else if (sign.equals("%")) {
+        } else if (sign.equals("%")) {
             result = number % number2;
-        }
-        else if (sign.equals("^")) {
+        } else if (sign.equals("^")) {
             result = 1;
             for (int i = 0; i < number2; i++) {
                 result *= number;
             }
         } else {
-              result = 0;
+            result = 0;
         }
         System.out.println(number + " " + sign + " " + number2 + " = " + result);
 
