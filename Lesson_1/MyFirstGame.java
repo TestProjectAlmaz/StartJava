@@ -8,10 +8,12 @@ public class MyFirstGame {
             playerNumber = Integer.parseInt(System.console().readLine());
             if (randomNumber < playerNumber) {
                 System.out.println("Это число больше того что загадал компьютер.");
-        } else {
+        } else if (randomNumber > playerNumber) {
             System.out.println("Это число меньше того что загадал компьютер.");
-          }
         }
-        System.out.println("Вы победили!");
-      }
-    }
+            else{
+                System.out.println("Вы победили!");
+              }          
+            }        
+          }      
+        }
