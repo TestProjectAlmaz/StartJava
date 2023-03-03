@@ -1,59 +1,73 @@
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("1. Подсчет суммы четных и нечетных чисел:\n ");
-        int oddSum = 0; 
-        int evenSum = 0;       
+        int evenSum = 0; 
+        int oddSum = 0;       
         int counter = -10;
         do {
             if (counter % 2 == 0) {
-                oddSum += counter;
-            } else {
                 evenSum += counter;
+        } else {
+            oddSum += counter;
         }   
         counter++;
         } while (counter <= 21);          
         System.out.println("В промежутке [-10, 21]:\n " + "сумма четных чисел = " +
-                oddSum + " \n " + "сумма нечетных чисел = " + evenSum + "\n");    
+                evenSum + " \n " + "сумма нечетных чисел = " + oddSum + "\n");    
          
         System.out.println("2. Вывод чисел в интервале (min и max) в порядке убывания:\n ");
-        int min = -1;
-        int max = 10;
-        for (int i = max - 1; i > min; i--) {
+        int number0 = 10;
+        int number1 = 5;
+        int number2 = -1;
+        for (int i = number0 -1; i > number1; i--) {
             System.out.print(i + " ");
-        }    
-       
+        }
+            for (int j = number1 -1; j > number2; j--){            
+            System.out.print(j + " ");         
+        }
+
         System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр:\n");
         int num = 1234;
-        int reversed = 0;
         int sum = 0;
+        int reversedNum = 0;
+        System.out.print("Реверсивным значением числа " + num + " является: ");
         while (num != 0) {
-            int i = num % 10;
-            reversed = reversed * 10 + i;
-            sum += i;
-            num /= 10;      
+           int digit = num % 10;
+           System.out.print(digit + " ");
+           sum += digit;
+           reversedNum = reversedNum * 10 + digit;
+           num /= 10;
         }
-        System.out.println("Реверсивное значение исходного числа: " + reversed);
-        System.out.println("Сумма цифр: " + sum + "\n");
+        System.out.println("\nСумма цифр равна: " + sum + "\n");            
 
         System.out.println("4. Вывод чисел на консоль в несколько строк:\n ");
-        for (int i = 1; i < 24; i += 2) {
-            if (i < 10) {
-                System.out.printf("%5d ", i);
+        int start = 1;
+        int end = 24;
+        int step = 2;
+        int numbersPerLine = 3;        
+        int count2 = 0;
+        for (int i = start; i < end; i += step) {
+            if (count2 == 0) {
+                System.out.printf("%4d ", i);
+        } else if (count2 == numbersPerLine - 1) {
+            System.out.printf("%4d%n", i);
         } else {
-            System.out.printf("%5d ", i);
+            System.out.printf("%4d ", i);
         }
-        if (i % 5 == 4) {
-            System.out.println();
-           }
+        count2++;
+        if (count2 == numbersPerLine) {
+            count2 = 0;
+            }
         }
-        int numZero = (24 - 1) % 7;
-        for (int j = 0; j < 5 - numZero; j++) {
-            System.out.printf("%5d ", 0);
-        }
+        int zerosNeeded = numbersPerLine - count2;       
+        for (int i = 0; i < zerosNeeded; i++) {
+            System.out.printf("%4d ", 0);
+        }    
+
         System.out.println("\n\n5. Проверка количества двоек на четность/нечетность:\n");
         int num1 = 3242592;
         int countTwos = 0;
-        while (num1 != 0) {
+        while (num1 > 0) {
             if (num1 % 10 == 2) {
                 countTwos++;
         }
