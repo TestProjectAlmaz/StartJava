@@ -1,10 +1,10 @@
 public class Calculator {
     public static void main(String[] args) {
-        System.out.println("1. Калькулятор:\n ");
+        System.out.println("Итоговое ДЗ 1. Калькулятор:\n ");
         int number = 10;
         int number2 = 5;
         int result;
-        String sign = "*";
+        String sign = "+";
 
         if (sign.equals("+")) {
             result = number + number2;

@@ -1,18 +1,44 @@
 public class MyFirstGame {
     public static void main (String[] args) {
-        System.out.println("1. Игра “Угадай число”:\n ");
-        int randomNumber = (int) (Math.random() * 100 + 1);
-        int playerNumber = 0;
-        System.out.println("Угадай число в промежутке от 0 до 100");
-        while (randomNumber != playerNumber) {
-            playerNumber = Integer.parseInt(System.console().readLine());
-            if (randomNumber < playerNumber) {
-                System.out.println("Это число больше того что загадал компьютер.");
-        } else if (randomNumber > playerNumber) {
-            System.out.println("Это число меньше того что загадал компьютер.");
+        System.out.println("Итоговое ДЗ 2. Игра Угадай число:\n");
+        int min = 0;
+        int max = 100;
+        int guess = (min + max) - 50;
+        System.out.println("Компьютер загадал число: " + guess);        
+        int playerNumber = -1;//число игрока       
+        while (playerNumber != guess) {      
+            playerNumber = updateNumber(playerNumber, min, max);
+            System.out.println("Игрок угадал число: " + playerNumber);
+            // проверка угадал ли игрок число
+            if (playerNumber == guess) {
+                System.out.println("Вы победили!");
+        } else {            
+            if (playerNumber > guess) {
+                System.out.println("Число " + playerNumber + " больше, того что загадал компьютер.");
+                break;
         } else {
-            System.out.println("Вы победили!");
-              }          
-            }        
-          }      
+            System.out.println("Число " + playerNumber + " меньше, того что загадал компьютер.");
+            break;                        
+              }
+            }
+          }
         }
+        //Алгоритм обновления числа игрока
+        public static int updateNumber(int playerNumber, int min, int max) {
+        if (playerNumber == -1) {
+            return (min + max) - 50;
+        } else if (playerNumber < max) {
+            return (playerNumber + max) / 2;
+        } else if (playerNumber > min) {
+            return (playerNumber + min) / 2;
+        } else {
+            return -1;
+            }
+          }
+        }                     
+
+
+
+
+
+         
