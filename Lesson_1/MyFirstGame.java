@@ -5,7 +5,8 @@ public class MyFirstGame {
         int max = 100;
         int guess = (min + max) - 50;
         System.out.println("Компьютер загадал число: " + guess);        
-        int playerNumber = -1;//число игрока       
+        int playerNumber = -1;//число игрока
+               
         while (playerNumber != guess) {      
             playerNumber = updateNumber(playerNumber, min, max);
             System.out.println("Игрок угадал число: " + playerNumber);
