@@ -13,13 +13,13 @@ public class MyFirstGame {
             // проверка угадал ли игрок число
             if (playerNumber == guess) {
                 System.out.println("Вы победили!");
-        } else {            
+            } else {            
             if (playerNumber > guess) {
                 System.out.println("Число " + playerNumber + " больше, того что загадал компьютер.");
                 break;
-        } else {
-            System.out.println("Число " + playerNumber + " меньше, того что загадал компьютер.");
-            break;                        
+            } else {
+                System.out.println("Число " + playerNumber + " меньше, того что загадал компьютер.");
+                break;                        
               }
             }
           }
