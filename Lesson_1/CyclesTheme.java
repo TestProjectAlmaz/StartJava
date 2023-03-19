@@ -56,7 +56,7 @@ public class CyclesTheme {
 
         System.out.println("4. Вывод чисел на консоль в несколько строк:\n ");
         int start = 1;
-        int end = 30;
+        int end = 24;
         int step = 2;
         int numbersPerLine = 5;        
         int count2 = 0;
