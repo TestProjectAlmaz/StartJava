@@ -55,30 +55,22 @@ public class CyclesTheme {
         System.out.println("\nСумма цифр равна: " + sum + "\n");            
 
         System.out.println("4. Вывод чисел на консоль в несколько строк:\n ");
-        int start = 1;
-        int end = 24;
-        int step = 2;
-        int numbersPerLine = 5;        
-        int count2 = 0;
-
-        for (int i = start; i < end; i += step) {
-            if (count2 == 0) {
-                System.out.printf("%3d ", i);
-            } else if (count2 == numbersPerLine - 1) {
-                System.out.printf("%3d%n", i);
-            } else {
-                System.out.printf("%3d ", i);
-            }
-            count2++;
-            if (count2 == numbersPerLine) {
-                count2 = 0;
+        int start = 1, end = 24, iteration = 2;
+        int count3 = 0, missing = 0;
+        int zero = 0;
+        for (int i = start; i < end; i += iteration) {
+            count3++;
+            System.out.printf("%2d ", i);
+            if (count3 % 5 == 0) {
+                System.out.println();
             }
         }
-        //int zerosNeeded = numbersPerLine - count2; 
-         int zerosNeeded = 3;    
-        for (int i = 0; i < zerosNeeded; i++) {
-            System.out.printf("%3d ", i);
-        }    
+        missing = 5 - (count3 % 5);
+        if (missing != 5) {
+            for (int j = 0; j < missing; j++) {
+                System.out.printf("%2d ", zero);
+            }
+        }
 
         System.out.println("\n\n5. Проверка количества двоек на четность/нечетность:\n");
         int number5 = 3242592;
